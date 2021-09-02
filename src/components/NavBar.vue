@@ -84,8 +84,13 @@ export default defineComponent({
         > * {
           display: block;
           height: 70px;
-          margin-right: 40px  ;
+          margin-right: 40px;
           text-align: center;
+
+          &.router-link-active {
+            border-bottom: 0;
+            font-weight: bold;
+          }
         }
       }
     }
