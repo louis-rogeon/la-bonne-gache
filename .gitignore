@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
-/dist
+# Let dist dir so that Heroku can fetch build on GitHub
+# /dist
 
 
 # local env files
