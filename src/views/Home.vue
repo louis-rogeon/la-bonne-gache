@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="home" title="1920x1080">
+    <h1>La Bonne Gâche</h1>
+    <div class="home-actions">
+      <router-link to="/evenements" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Les évènements à venir</router-link>
+      <router-link to="/privatisation" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Privatiser</router-link>
+      <router-link to="/infos-contact" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Informations & contact</router-link>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+<style scoped lang="scss">
+  .home {
+    height: 840px;
+    padding-top: 7%;
+    color: white;
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
-</script>
+    background-image: url(/home_stock.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(35, 72, 56);
+
+    .home-actions {
+      margin-top: 5%;
+      text-align: center;
+
+      .o-btn:not(:first-child) {
+        margin-left: 40px;
+      }
+    }
+  }
+</style>
