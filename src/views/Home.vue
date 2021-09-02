@@ -26,8 +26,8 @@
       margin-top: 5%;
       text-align: center;
 
-      .o-btn:not(:first-child) {
-        margin-left: 40px;
+      .o-btn {
+        margin: 10px 20px;
       }
     }
   }

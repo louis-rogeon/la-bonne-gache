@@ -2,7 +2,10 @@
   <header>
     <SocialNetworksBanner />
     <div id="menu">
-      <router-link id="logo" to="/">La Bonne Gâche</router-link>
+      <router-link id="logo" to="/">
+        <img src="logo.jpg"/>
+        La Bonne Gâche
+      </router-link>
       <NavBar />
     </div>
   </header>
@@ -45,6 +48,13 @@ header {
       flex-shrink: 3;
       color: rgb(35, 72, 56);
       font-size: 2rem;
+      font-family: $logo-font;
+
+      img {
+        height: 70px;
+        width: 70px;
+        vertical-align: middle;
+      };
     }
   }
 }
@@ -60,6 +70,11 @@ header {
       #logo {
         margin-left: 30px;
         font-size: 1.5rem;
+
+        img {
+          height: 60px;
+          width: 60px;
+        }
       }
     }
   }

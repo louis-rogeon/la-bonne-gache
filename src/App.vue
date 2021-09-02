@@ -40,19 +40,22 @@ a {
   box-sizing: border-box;
 }
 h1 {
-  font-size: 3em;
-  text-align: center;
   margin: 50px 0;
+  font-size: 3em;
+  font-family: $logo-font;
+  text-align: center;
 }
 h2 {
-  font-size: 2.5em;
-  text-align: center;
-  padding: 30px 0;
   margin: 0;
+  padding: 30px 0;
+  font-size: 2.5em;
+  font-family: $logo-font;
+  text-align: center;
 }
 h3 {
   margin: 50px 0;
   font-size: 2em;
+  font-family: $logo-font;
   text-align: center;
 }
 h5 {
