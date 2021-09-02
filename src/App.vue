@@ -15,7 +15,7 @@ import Footer from "@/components/Footer.vue"; // @ is an alias to /src
     Header,
     Body,
     Footer
-  },
+  }
 })
 export default class App extends Vue {}
 </script>
