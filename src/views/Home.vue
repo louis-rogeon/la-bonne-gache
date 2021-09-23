@@ -15,7 +15,7 @@
     padding-top: 7%;
     color: white;
 
-    background-image: url(/home_stock.jpg);
+    background-image: url(/home_stock-min.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -21,12 +21,12 @@
         </p>
       </div>
       <div class="image">
-        <img src="/cha_stock.jpg" title="490x490" alt="Le Mot de Charlotte" />
+        <img src="/cha_stock-min.jpg" title="490x490" alt="Le Mot de Charlotte" />
       </div>
     </div>
     <div class="alongside-container our-story">
       <div class="image">
-        <img src="/val_stock.jpg" title="490x490" alt="Le Mot de Valentin" />
+        <img src="/val_stock-min.jpg" title="490x490" alt="Le Mot de Valentin" />
       </div>
       <div class="content">
         <h3>C’est quoi une gâche ?</h3>
@@ -148,7 +148,7 @@ ul {
   height: 620px;
   min-width: 980px;
   position: relative;
-  background-image: url(/cha_val_stock.jpg);
+  background-image: url(/cha_val_stock-min.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -201,7 +201,7 @@ ul {
       right: 10vw !important;
     }
   }
-  
+
   ul {
     width: 100%;
   }
