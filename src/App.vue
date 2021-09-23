@@ -26,8 +26,10 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  color: $black;
 }
 html {
+  height: initial;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,28 +41,27 @@ a {
 * {
   box-sizing: border-box;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $text-font;
+  font-weight: lighter;
+  text-align: center;
+  color: $black;
+}
 h1 {
   margin: 50px 0;
   font-size: 3em;
-  font-family: $logo-font;
-  text-align: center;
 }
 h2 {
   margin: 0;
   padding: 30px 0;
   font-size: 2.5em;
-  font-family: $logo-font;
-  text-align: center;
 }
 h3 {
   margin: 50px 0;
   font-size: 2em;
-  font-family: $logo-font;
-  text-align: center;
 }
 h5 {
   margin: 10px 0;
   font-size: 1.2em;
-  text-align: center;
 }
 </style>

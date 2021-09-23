@@ -1,19 +1,23 @@
 <template>
   <div class="presentation">
-    <h2>Le Concept de La Bonne Gâche</h2>
+    <h2>Il était une fois ...</h2>
     <div class="overlapping-container our-story" title="1920x1080">
       <div class="content">
-        <h3>Notre Histoire</h3>
+        <h3>... La Bonne Gâche</h3>
         <p>
-          La Bonne Gâche, c’est l’histoire de deux amoureux, Charlotte et Valentin. Des amoureux de vins, de bières et de bons produits. Epicuriens, bons vivants oui… Mais c’est aussi une volonté de consommer différemment. Une envie de participer à leur manière à la vie locale. Tout cela, dans la bonne humeur, le partage et une ambiance rétro-chic ! 
+          C’est l’histoire de deux amoureux, Charlotte et Valentin. Des amoureux de vins, de bières et de bons produits.
+          Epicuriens, bons vivants oui…mais c’est aussi une volonté de consommer différemment.
+          Une envie de participer à leur manière à la vie locale.
+          Tout cela, dans la bonne humeur, du partage et de la bonne musique ! 
         </p>
       </div>
     </div>
     <div class="alongside-container our-story">
       <div class="content">
-        <h3>Le Mot de la Patronne</h3>
+        <h3>Petit mot des patrons</h3>
         <p>
-          <em>Au temps de nos grands-parents, la vie était plus simple, plus écolo, plus humaine. C’est ce retour aux sources que nous souhaitons privilégier à La Bonne Gâche.</em> <strong>Charlotte</strong>
+          C’était un rêve de créer notre bébé et devenir patron. Un bar à notre image sans prise de tête avec des produits sélectionnés par nos soins. 
+          Nous voulons privilégier un retour aux sources, comme avant, avec une vie plus simple, plus écolo et plus humaine !
         </p>
       </div>
       <div class="image">
@@ -25,9 +29,12 @@
         <img src="/val_stock.jpg" title="490x490" alt="Le Mot de Valentin" />
       </div>
       <div class="content">
-        <h3>Le Mot du Patron</h3>
+        <h3>C’est quoi une gâche ?</h3>
         <p>
-          <em>Bon là wallha j'avais la flemme d'écrire un texte, pour l'instant y'a que néné qui en a fait un. L'investissement fournit par chaque partie n'est peut-être pas vraiment équivalent</em> <strong>Valentin</strong>  
+          Gâche \ɡɑʃ\ féminin<br/>
+          (Argot) Place, emploi, situation<br/>
+          (En particulier) Dans l’argot des poilus, c’est une bonne place, une planque.<br/>
+          (Lyonnais) Une place pour s’asseoir, se garer, se poser.  
         </p>
       </div>
     </div>
@@ -99,6 +106,7 @@ ul {
 .content {
   padding: 50px;
   background-color: white;
+  z-index: 40;
 
   h3 {
     margin-bottom: 70px;
@@ -110,7 +118,8 @@ ul {
     text-align: center;
 
     em {
-      font-style: italic;
+      font-family: $text-font;
+      // font-style: italic;
       margin-right: 40px;
 
       &::before, &::after {
@@ -132,6 +141,9 @@ ul {
     }
   }
 }
+.image {
+  z-index: 10;
+}
 .overlapping-container {
   height: 620px;
   min-width: 980px;
@@ -141,7 +153,7 @@ ul {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: rgb(35, 72, 56);
+  background-color: $primary;
   
   .content {
     position: absolute;
@@ -176,6 +188,22 @@ ul {
   }
   div:last-child {
     left: 50%;
+  }
+}
+
+@media screen and (max-width:979px) {
+  .overlapping-container, .alongside-container {
+    min-width: initial;
+
+    .content {
+      width: 80vw;
+      left: 10vw !important;
+      right: 10vw !important;
+    }
+  }
+  
+  ul {
+    width: 100%;
   }
 }
 </style>

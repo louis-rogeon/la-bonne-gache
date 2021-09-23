@@ -1,6 +1,6 @@
 <template>
   <div class="home" title="1920x1080">
-    <h1>La Bonne Gâche</h1>
+    <h1>La Bonne Gache</h1>
     <div class="home-actions">
       <router-link to="/evenements" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Les évènements à venir</router-link>
       <router-link to="/privatisation" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Privatiser</router-link>
@@ -20,7 +20,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgb(35, 72, 56);
+    background-color: $primary;
+
+    h1 {
+      font-size: 6rem;
+      font-family: $logo-font;
+      color: $white;
+    }
 
     .home-actions {
       margin-top: 5%;

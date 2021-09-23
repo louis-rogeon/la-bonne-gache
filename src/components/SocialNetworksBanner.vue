@@ -12,7 +12,7 @@
   width: 100%;
   padding-left: 40px;
   line-height: 50px;
-  background-color: rgb(246, 240, 169);
+  background-color: $white;
 
   a {
     &:not(:first-child) {
@@ -20,6 +20,7 @@
     }
 
     .fab {
+      color: $primary;
       font-size: 20px;
     }
   }

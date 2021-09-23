@@ -1,6 +1,13 @@
 @font-face {
-  font-family: "FjallaOne";
-  src: url("/FjallaOne-Regular.ttf") format("truetype");
- }
+  font-family: "Haarlem Deco";
+  src: url("/haarlem_deco.ttf") format("truetype");
+}
 
- $logo-font: "FjallaOne"
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("/RobotoSlab_wght.ttf") format("truetype");
+}
+
+
+$logo-font: "Haarlem Deco";
+$text-font: "Roboto Slab";

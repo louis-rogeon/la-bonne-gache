@@ -33,13 +33,13 @@ $sizes: (
 // Colors
 
 $white: #ffffff !default;
-$black: #000000 !default;
+$black: #222 !default;
 $grey: #7a7a7a !default;
 $grey-light: #b5b5b5 !default;
 $grey-lighter: #dbdbdb !default;
 $grey-dark: #4a4a4a !default;
 
-$primary: #234838 !default;
+$primary: #529896 !default;
 $primary-invert: $white !default;
 
 $danger: #b60000 !default;
@@ -59,3 +59,6 @@ $colors: (
     "success" : ($success, $success-invert),
     "info" : ($info, $info-invert)
 ) !default;
+
+// Specifics
+$banner-color: #d316e4 !default;

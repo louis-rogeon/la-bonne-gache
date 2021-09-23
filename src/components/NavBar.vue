@@ -1,7 +1,7 @@
 <template>
 <div id="navbar">
   <nav :class="{'active': isBurgerActive}">
-    <router-link to="/concept" @click="collapseMenu">Notre Concept</router-link>
+    <router-link to="/concept" @click="collapseMenu">Le Concept</router-link>
     <router-link to="/nos-producteurs" @click="collapseMenu">Nos producteurs</router-link>
     <router-link to="/evenements" @click="collapseMenu">Évènements</router-link>
     <router-link to="/privatisation" @click="collapseMenu">Privatisation</router-link>
@@ -41,6 +41,7 @@ export default defineComponent({
   nav {
     height: 90px;
     line-height: 90px;
+    font-family: $text-font;
 
     > * {
       display: inline-block;

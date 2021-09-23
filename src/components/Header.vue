@@ -4,7 +4,7 @@
     <div id="menu">
       <router-link id="logo" to="/">
         <img src="logo.jpg"/>
-        La Bonne Gâche
+        La Bonne Gache
       </router-link>
       <NavBar />
     </div>
@@ -46,7 +46,7 @@ header {
 
     #logo {
       flex-shrink: 3;
-      color: rgb(35, 72, 56);
+      color: $black;
       font-size: 2rem;
       font-family: $logo-font;
 
