@@ -60,7 +60,7 @@ export default defineComponent({
           "Extraits naturels de noix de cola et avec du sucre issu du commerce équitable (Cola 0 = sans aspartame)"
 
         ]},
-        { id: 'hys', name: 'Tonic/Ginger Beer', producer: 'Hysope', bullets: [
+        { id: 'hys', position: { lat: 45.7579293, lng: 4.7650904 }, name: 'Tonic/Ginger Beer', producer: 'Hysope', bullets: [
             "100% français : arômes, étiquettes, embouteillage",
             "Médaille d’or (Ginger Beer) et médaille d’argent (Tonic) 2021 au Spirit Business"
         ]},
