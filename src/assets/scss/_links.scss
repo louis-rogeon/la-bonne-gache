@@ -1,0 +1,13 @@
+.link {
+  text-decoration: underline;
+  color: $primary;
+}
+.logo-link {
+  margin: 50px;
+  color: $primary;
+
+  .fab, .fas {
+    font-size: 50px;
+    transform: translateY(25%);
+  }
+}

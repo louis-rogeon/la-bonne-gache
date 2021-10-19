@@ -4,7 +4,12 @@
       <div class="producer-list">
         <ul>
           <li v-for="item in producers" :key="item.id" @click="toggleFocus(item)" :class="{'active': activeProducer.id === item.id}">
-            <h5 class="product-name">{{ item.name }}</h5>
+            <div class="logos">
+              <img v-for="logo in item.logos" :key="logo.id" :src="logo" />
+            </div>
+            <h5 class="product-name">
+              {{ item.name }}
+            </h5>
             <h6 class="product-producer">{{ item.producer }}</h6>
             <ul class="bullet-list">
               <li v-for="bullet in item.bullets" :key="bullet.id">
@@ -30,8 +35,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { GoogleMap, Marker } from 'vue3-google-map'
+import { defineComponent } from 'vue';
+import { GoogleMap, Marker } from 'vue3-google-map';
+import abSvg from '@/assets/svg/ab.svg';
+import fairTradeSvg from '@/assets/svg/fairtrade.svg';
+import glutenFreeSvg from '@/assets/svg/gluten-free.svg';
 
 export default defineComponent({
   components: { GoogleMap, Marker },
@@ -45,7 +53,7 @@ export default defineComponent({
           "Brassé dans le Val d’Oise",
           "100% naturel : sans arôme (naturel ou de synthèse), sans conservateur, sans colorant, sans additif",
           "Jus et purées de fruits BIO et issus de l’agriculture française ou de l’Union Européenne"
-        ]},
+        ], logos: [abSvg]},
         { id: 'app', position: { lat: 48.8884983, lng: 2.4105476 }, name: 'Limonade/Limonade citron vert', producer: 'Brasseurs Savoyards', bullets: [
           "Brassé en Savoie",
           "Respect du terroir",
@@ -59,7 +67,7 @@ export default defineComponent({
           "Vocation sociale : 5 centimes/bouteille reversés à une association locale « Au tambour ». Elle vient en aide aux femmes victimes de précarité et violences",
           "Extraits naturels de noix de cola et avec du sucre issu du commerce équitable (Cola 0 = sans aspartame)"
 
-        ]},
+        ], logos: [glutenFreeSvg, fairTradeSvg]},
         { id: 'hys', position: { lat: 45.7579293, lng: 4.7650904 }, name: 'Tonic/Ginger Beer', producer: 'Hysope', bullets: [
             "100% français : arômes, étiquettes, embouteillage",
             "Médaille d’or (Ginger Beer) et médaille d’argent (Tonic) 2021 au Spirit Business"
@@ -79,6 +87,13 @@ export default defineComponent({
         ]}
       ]
     }
+  },
+  setup() {
+    return {
+      abSvg,
+      fairTradeSvg,
+      glutenFreeSvg
+    };
   },
   methods: {
     toggleFocus(producer: any) {
@@ -138,7 +153,19 @@ export default defineComponent({
             }
           }
 
+          .logos {
+            margin-top: -10px;
+            text-align: center;
+
+            img {
+              height: 30px;
+              width: 30px;
+              margin: 0 10px;
+            }
+          }
+
           .product-name {
+            position: relative;
             margin: 0;
             font-weight: initial;
             font-size: 1.2rem;
@@ -154,29 +181,8 @@ export default defineComponent({
           .bullet-list {
             display: none;
             margin: 20px 0;
-            padding: 0;
             font-size: .9rem;
-            list-style: none;
             transition: all ease .3s;
-
-            li {
-              position: relative;
-              margin: 20px 0;
-              padding-left: 30px;
-
-              &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 10px;
-                width: 6px;
-                height: 6px;
-                border-radius: 3px;
-                border: 2px solid$primary;
-                transform: translateY(-50%);
-              }
-            }
           }
         }
       }

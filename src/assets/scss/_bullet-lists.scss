@@ -1,0 +1,23 @@
+.bullet-list {
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      border: 2px solid$primary;
+      transform: translateY(-50%);
+    }
+  }
+}

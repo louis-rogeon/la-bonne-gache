@@ -70,29 +70,29 @@ export default defineComponent({
 @media screen and (max-width:979px){
   #navbar {
     nav {
-      display: none;
+      left: 100vw;
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      padding-top: 100px;
+      background-color: $white;
+      transition: all ease .5s;
+
+      > * {
+        display: block;
+        height: 70px;
+        margin-right: 40px;
+        text-align: center;
+
+        &.router-link-active {
+          border-bottom: 0;
+          font-weight: bold;
+        }
+      }
 
       &.active {
-        display: block;
-        position: fixed;
-        top: 0;
         left: 0;
-        height: 100vh;
-        width: 100vw;
-        padding-top: 100px;
-        background-color: $white;
-
-        > * {
-          display: block;
-          height: 70px;
-          margin-right: 40px;
-          text-align: center;
-
-          &.router-link-active {
-            border-bottom: 0;
-            font-weight: bold;
-          }
-        }
       }
     }
 

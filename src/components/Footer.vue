@@ -1,7 +1,7 @@
 <template>
   <footer>
     <span id="footer-copyright">&copy; 2021 - La Bonne Gâche. Développé avec enthousiasme par Louis Rogeon</span>
-    <span id="footer-contact">44 rue de la Croix Rousse, 69004 Lyon. Tél : 04 72 21 21 21</span>
+    <span id="footer-contact">37, rue Imbert Colomes, 69001 Lyon. Tél : 04 72 21 21 21</span>
   </footer>
 </template>
 
