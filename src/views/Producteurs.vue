@@ -1,8 +1,8 @@
 <template>
-<h2>Nos Producteurs</h2>
-
-<MapPoints />
-
+<div class="producteurs">
+  <h2>Nos Producteurs</h2>
+  <MapPoints />
+</div>
 </template>
 
 <script lang="ts">

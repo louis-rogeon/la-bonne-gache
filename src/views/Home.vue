@@ -1,12 +1,12 @@
 <template>
-  <div class="home" title="1920x1080">
-    <h1>La Bonne Gache</h1>
-    <div class="home-actions">
-      <router-link to="/evenements" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Les évènements à venir</router-link>
-      <router-link to="/privatisation" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Privatiser</router-link>
-      <router-link to="/infos-contact" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Informations & contact</router-link>
-    </div>
+<div class="home" title="1920x1080">
+  <h1>La Bonne Gache</h1>
+  <div class="home-actions">
+    <router-link to="/evenements" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Les évènements à venir</router-link>
+    <router-link to="/privatisation" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Privatiser</router-link>
+    <router-link to="/infos-contact" class="o-btn large o-btn--white o-btn--outlined-white" variant="white" outlined>Informations & contact</router-link>
   </div>
+</div>
 </template>
 
 <style scoped lang="scss">

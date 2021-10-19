@@ -10,12 +10,13 @@
   height: 50px;
   width: 100%;
   padding-left: 40px;
-  line-height: 50px;
+  line-height: 75px;
   background-color: $white;
+  text-align: center;
 
   a {
     &:not(:first-child) {
-      margin-left: 20px;
+      margin-left: 100px;
     }
 
     .fab {
@@ -29,6 +30,8 @@
   #social-networks-banner {
     position: absolute;
     top: 90px;
+    text-align: left;
+    line-height: 50px;
   }
 }
 </style>
