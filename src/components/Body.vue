@@ -13,7 +13,6 @@
 #body {
   max-width: 100%;
   margin-top: 140px;
-  overflow-x: hidden;
 }
 
 .fade-enter-active,

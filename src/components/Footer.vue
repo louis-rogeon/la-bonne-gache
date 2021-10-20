@@ -8,6 +8,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 footer {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -16,5 +17,6 @@ footer {
   font-size: .8rem;
   background-color: $primary;
   color: white;
+  z-index: 50;
 }
 </style>

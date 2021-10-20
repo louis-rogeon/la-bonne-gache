@@ -11,7 +11,7 @@
               {{ item.name }}
             </h5>
             <h6 class="product-producer">{{ item.producer }}</h6>
-            <ul class="bullet-list">
+            <ul class="o-bullet-list">
               <li v-for="bullet in item.bullets" :key="bullet.id">
                 {{ bullet }}
               </li>

@@ -1,45 +1,50 @@
 <template>
-<div class="presentation">
-  <h2>Il était une fois ...</h2>
-  <div class="presentation">
-    <div class="overlapping-insert our-story" title="1920x1080">
-      <div class="content">
-        <h3>... La Bonne Gâche</h3>
-        <p>
-          C’est l’histoire de deux amoureux, Charlotte et Valentin. Des amoureux de vins, de bières et de bons produits.
-          Epicuriens, bons vivants oui…mais c’est aussi une volonté de consommer différemment.
-          Une envie de participer à leur manière à la vie locale.
-          Tout cela, dans la bonne humeur, du partage et de la bonne musique ! 
-        </p>
+<div class="presentation o-grid">
+  <h2 class="o-grid__title">Il était une fois ...</h2>
+
+  <div class="o-grid__banner">
+    <img class="o-grid__banner-image" src="/cha_val_stock-min.jpg" title="1920x1080" />
+    <div class="o-grid__banner-text">
+      <h3>... La Bonne Gâche</h3>
+      <p>
+        C’est l’histoire de deux amoureux, Charlotte et Valentin. Des amoureux de vins, de bières et de bons produits.
+        Epicuriens, bons vivants oui…mais c’est aussi une volonté de consommer différemment.
+        Une envie de participer à leur manière à la vie locale.
+        Tout cela, dans la bonne humeur, du partage et de la bonne musique ! 
+      </p>
+    </div>
+  </div>
+
+  <div class="o-grid__splitted left-sided-content">
+    <div class="o-grid__splitted-text">
+      <h3>Petit mot des patrons</h3>
+      <p>
+        C’était un rêve de créer notre bébé et devenir patron. Un bar à notre image sans prise de tête avec des produits sélectionnés par nos soins. 
+        Nous voulons privilégier un retour aux sources, comme avant, avec une vie plus simple, plus écolo et plus humaine !
+      </p>
+    </div>
+    <div class="o-grid__splitted-image">
+      <img src="/cha_stock-min.jpg" title="490x490" alt="Le Mot de Charlotte" />
+    </div>
+  </div>
+
+  <div class="o-grid__splitted">
+    <div class="o-grid__splitted-image">
+      <img src="/val_stock-min.jpg" title="490x490" alt="Le Mot de Valentin" />
+    </div>
+    <div class="o-grid__splitted-text">
+      <h3>C’est quoi une gâche ?</h3>
+      <div class="gache-definition">
+        <p class="head"><span class="word">Gâche</span> <span class="pronunciation">\ɡɑʃ\</span> féminin</p>
+        <p class="def"><span class="context">(Argot)</span><span class="meaning">Place, emploi, situation</span></p>
+        <p class="def"><span class="context">(En particulier)</span><span class="meaning">Dans l’argot des poilus, c’est une bonne place, une planque.</span></p>
+        <p class="def"><span class="context">(Lyonnais)</span><span class="meaning">Une place pour s’asseoir, se garer, se poser.</span></p>  
       </div>
     </div>
-    <div class="alongside-insert our-story">
-      <div class="content">
-        <h3>Petit mot des patrons</h3>
-        <p>
-          C’était un rêve de créer notre bébé et devenir patron. Un bar à notre image sans prise de tête avec des produits sélectionnés par nos soins. 
-          Nous voulons privilégier un retour aux sources, comme avant, avec une vie plus simple, plus écolo et plus humaine !
-        </p>
-      </div>
-      <div class="image">
-        <img src="/cha_stock-min.jpg" title="490x490" alt="Le Mot de Charlotte" />
-      </div>
-    </div>
-    <div class="alongside-insert our-story">
-      <div class="image">
-        <img src="/val_stock-min.jpg" title="490x490" alt="Le Mot de Valentin" />
-      </div>
-      <div class="content">
-        <h3>C’est quoi une gâche ?</h3>
-        <div class="gache-definition">
-          <p class="head"><span class="word">Gâche</span> <span class="pronunciation">\ɡɑʃ\</span> féminin</p>
-          <p class="def"><span class="context">(Argot)</span><span class="meaning">Place, emploi, situation</span></p>
-          <p class="def"><span class="context">(En particulier)</span><span class="meaning">Dans l’argot des poilus, c’est une bonne place, une planque.</span></p>
-          <p class="def"><span class="context">(Lyonnais)</span><span class="meaning">Une place pour s’asseoir, se garer, se poser.</span></p>  
-        </div>
-      </div>
-    </div>
-    <h3>Les Commandements de La Bonne Gâche</h3>
+  </div>
+
+  <div class="o-grid__full">
+    <h3 class="o-grid__full-title">Les Commandements de La Bonne Gâche</h3>
     <ul>
       <li>
         <h5><span class="bullet-point">1.</span>Une bonne gâche tu seras</h5>
@@ -75,6 +80,7 @@
       </li>
     </ul>
   </div>
+
 </div>
 </template>
 
@@ -82,7 +88,6 @@
 ul {
   width: 680px;
   margin: 0 auto;
-  margin-bottom: 50px;
   padding: 0;
   text-align: center;
   list-style: none;
@@ -105,37 +110,42 @@ ul {
     }
   }
 }
-.content {
-  .gache-definition {
-    .head {
-      margin: 30px 0;
-      text-align: left;
-      font-style: italic;
-    }
 
-    .def {
-      margin: 10px 0;
-      text-align: left;
+.gache-definition {
+  .head {
+    margin: 30px 0;
+    text-align: left;
+    font-style: italic;
+  }
 
-      .context {
-        margin-right: 20px;
-        font-size: .8rem;
-        font-weight: bold;
-      }
+  .def {
+    margin: 10px 0;
+    text-align: left;
 
-      .meaning {
-        font-size: .9rem;
-      }
-    }
-
-    .word {
+    .context {
+      margin-right: 20px;
+      font-size: .8rem;
       font-weight: bold;
-      font-style: normal;
     }
 
-    .pronunciation {
-      color: blue;
+    .meaning {
+      font-size: .9rem;
     }
+  }
+
+  .word {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .pronunciation {
+    color: blue;
+  }
+}
+
+@media screen and (max-width:979px) {
+  ul {
+    width: 100%;
   }
 }
 </style>

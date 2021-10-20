@@ -3,7 +3,6 @@
 @import "./variables.scss";
 @import "./fonts.scss";
 
-@import "./links.scss";
-@import "./bullet-lists.scss";
-
-@import "./inserts.scss";
+@import "./_objects/o-links.scss";
+@import "./_objects/o-bullet-lists.scss";
+@import "./_objects/o-grid.scss";

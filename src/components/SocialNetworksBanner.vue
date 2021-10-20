@@ -30,7 +30,6 @@
   #social-networks-banner {
     position: absolute;
     top: 90px;
-    text-align: left;
     line-height: 50px;
   }
 }

@@ -11,7 +11,7 @@
 
 <style scoped lang="scss">
   .home {
-    height: 840px;
+    height: 100vh;
     padding-top: 7%;
     color: white;
 
