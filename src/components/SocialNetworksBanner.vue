@@ -30,7 +30,13 @@
   #social-networks-banner {
     position: absolute;
     top: 90px;
-    line-height: 50px;
+    line-height: 60px;
+    background-color: $primary;
+    
+    a .fab {
+      font-size: 30px;
+      color: $white;
+    }
   }
 }
 </style>
