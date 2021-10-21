@@ -1,5 +1,6 @@
 <template>
   <section class="producers" :class="{'panel-active': isPanelActive }">
+    <div class="side-panel-overlay"></div>
     <div class="side-panel">
       <div class="producer-list">
         <ul>
@@ -116,6 +117,12 @@ export default defineComponent({
     width: 70%;
   }
 
+  .side-panel-overlay {
+    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
+
   .side-panel {
     display: inline-block;
     height: 100%;
@@ -199,6 +206,12 @@ export default defineComponent({
     height: calc(100vh - 190px);
 
     &.panel-active {
+      .side-panel-overlay {
+        display: block;
+        position: fixed;
+        opacity: 1;
+      }
+
       .side-panel {
         position: fixed;
         top: 50%;
@@ -216,27 +229,31 @@ export default defineComponent({
       width: 100%;
     }
 
+    .side-panel-overlay {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($grey-dark, .5);
+      z-index: 500;
+    }
+
     .side-panel {
       display: none;
       height: 85vh;
       width: 85vw;
-      border: 2px solid rgba($grey-dark, .5);
-      border-radius: 10px;
-      box-shadow: 4px 4px 4px rgba($grey-dark, .7);
-      z-index: 300;
+      z-index: 600;
 
       > .producer-list {
-        height: calc(100% - 110px);
+        height: calc(100% - 70px);
         overflow-y: auto;
       }
 
       .o-btn {
-        position: absolute;
-        bottom: 20px;
         display: block;
-        height: 70px;
-        width: calc(100% - 100px);
-        margin: 20px 50px 0;
+        height: 50px;
+        width: 200px;
+        margin: 10px auto 0;
 
         &__wrapper {
           font-size: 1.5rem
