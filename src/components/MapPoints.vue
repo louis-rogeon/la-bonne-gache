@@ -6,7 +6,7 @@
         <ul>
           <li v-for="item in producers" :key="item.id" @click="toggleFocus(item)" :class="{'active': activeProducer.id === item.id}">
             <div class="logos">
-              <img v-for="logo in item.logos" :key="logo.id" :src="logo" />
+              <img v-for="logo in item.logos" :key="logo.id" :src="logo.src" :title="logo.title" />
             </div>
             <h5 class="product-name">
               {{ item.name }}
@@ -41,6 +41,7 @@ import { GoogleMap, Marker } from 'vue3-google-map';
 import abSvg from '@/assets/svg/ab.svg';
 import fairTradeSvg from '@/assets/svg/fairtrade.svg';
 import glutenFreeSvg from '@/assets/svg/gluten-free.svg';
+import veganSvg from '@/assets/svg/vegan.svg';
 
 export default defineComponent({
   components: { GoogleMap, Marker },
@@ -50,42 +51,46 @@ export default defineComponent({
       center: { lat: 45.8016117, lng: 5.6885236 },
       activeProducer: { id: null, position: this.center },
       producers: [
-        { id: 'bs', position: { lat: 45.8016117, lng: 5.6885236 }, name: 'Orange/Orange sanguine', important: "Alternative à l'Orangina", producer: 'Mona – Appie', bullets: [
-          "Brassé dans le Val d’Oise",
-          "100% naturel : sans arôme (naturel ou de synthèse), sans conservateur, sans colorant, sans additif",
-          "Jus et purées de fruits BIO et issus de l’agriculture française ou de l’Union Européenne"
-        ], logos: [abSvg]},
-        { id: 'app', position: { lat: 48.8884983, lng: 2.4105476 }, name: 'Limonade/Limonade citron vert', producer: 'Brasseurs Savoyards', bullets: [
+        { id: 'sav', position: { lat: 48.8884983, lng: 2.4105476 }, name: 'Limonade/Limonade citron vert', producer: 'Brasseurs Savoyards', bullets: [
           "Brassé en Savoie",
           "Respect du terroir",
           "Eau des Alpes",
           "Traçabilité des matières premières sélectionnées",
           "Aucuns conservateurs ni additifs",
           "Réduction des déchets"
-        ]},
+        ], logos: [{src: abSvg, title: 'Agriculture biologique'}]},
+        { id: 'bs', position: { lat: 45.8016117, lng: 5.6885236 }, name: 'Orange/Orange sanguine', important: "Alternative à l'Orangina", producer: 'Mona – Appie', bullets: [
+          "Brassé dans le Val d’Oise",
+          "100% naturel : sans arôme (naturel ou de synthèse), sans conservateur, sans colorant, sans additif",
+          "Jus et purées de fruits BIO et issus de l’agriculture française ou de l’Union Européenne"
+        ], logos: [{src: abSvg, title: 'Agriculture biologique'}]},
         { id: 'comcola', position: { lat: 45.7579293, lng: 4.7650904 }, name: 'Cola/Cola Sans Sucres', producer: 'Community Cola', bullets: [
           "Brassé en Allemagne",
           "Vocation sociale : 5 centimes/bouteille reversés à une association locale « Au tambour ». Elle vient en aide aux femmes victimes de précarité et violences",
           "Extraits naturels de noix de cola et avec du sucre issu du commerce équitable (Cola 0 = sans aspartame)"
 
-        ], logos: [glutenFreeSvg, fairTradeSvg]},
+        ], logos: [{src: glutenFreeSvg, title: 'Sans gluten'}, {src: fairTradeSvg, title: 'Commerce équitable'}, {src: veganSvg, title: 'Vegan'}]},
         { id: 'hys', position: { lat: 45.7579293, lng: 4.7650904 }, name: 'Tonic/Ginger Beer', producer: 'Hysope', bullets: [
             "100% français : arômes, étiquettes, embouteillage",
             "Médaille d’or (Ginger Beer) et médaille d’argent (Tonic) 2021 au Spirit Business"
-        ]},
+        ], logos: [{src: abSvg, title: 'Agriculture biologique'}]},
         { id: 'bis', position: { lat: 45.4898477, lng: 4.5649533 }, name: 'Jus de fruits', producer: 'Bissardon', bullets: [
           "Auvergne-Rhône-Alpes, dans un rayon de 80 km autour de Saint-Paul-en-Jarez entre le Massif du Pilat et les Monts du Lyonnais",
           "Partenariat avec plus de 250 arboriculteurs issus d’exploitations familiales et favorisant une culture raisonnée des fruits",
           "Sans additifs, sans arômes et sans conservateurs"
 
         ]},
-        { id: 'fils', position: { lat: 48.8848432, lng: 2.2884456 }, name: 'Cide de Pommes/Poires', producer: 'Fils de Pomme', bullets: [
+        { id: 'fils', position: { lat: 48.8848432, lng: 2.2884456 }, name: 'Cidre de Pommes/Poires', producer: 'Fils de Pomme', bullets: [
           "Pommes et poires 100% françaises récoltées en ultra-local et mises en cuve à moins de 90km de Paris", 
           "Aucun ajout de sucre, de conservateur ou de produit chimiques",
           "Déchets (Marc de pommes) sont 100% recyclés et revalorisé (alimentation bovins)",
           "Ambassadeurs du recyclage (partenariat avec Adelph)",
           "Finance la sauvegarde des abeilles en Normandie"
-        ]}
+        ], logos: [{src: abSvg, title: 'Agriculture biologique'}]},
+        { id: 'app', position: { lat: 48.8848432, lng: 2.2884456 }, name: 'Cidre', producer: 'Appie', bullets: [
+          "Fabriqué en Val d'Oise", 
+          "100% pur jus français, fruits pressés uniquement, sans sucres ajoutés, sans concentré et sans colorants",
+        ], logos: [{src: abSvg, title: 'Agriculture biologique'}]}
       ]
     }
   },
@@ -98,6 +103,7 @@ export default defineComponent({
   },
   methods: {
     toggleFocus(producer: any) {
+      console.log('WOW toggle focus', producer, this.activeProducer);
       this.activeProducer = producer.id === this.activeProducer.id
         ? { id: null, position: producer.position }
         : producer;
@@ -155,7 +161,7 @@ export default defineComponent({
           }
 
           &.active {
-            .bullet-list {
+            .o-bullet-list {
               display: block;
             }
           }
@@ -185,7 +191,7 @@ export default defineComponent({
             font-size: 1rem;
           }
 
-          .bullet-list {
+          .o-bullet-list {
             display: none;
             margin: 20px 0;
             font-size: .9rem;
